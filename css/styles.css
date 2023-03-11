@@ -1,0 +1,114 @@
+/* styles2.css v2 */
+
+body {
+  margin: 0;
+  background: rgb(54, 54, 54);
+  color: white;
+  font-family: Verdana, sans-serif;
+}
+/*
+.hide {
+  display: none;
+}
+*/
+.button {
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+  margin: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.button img {
+  width: 100px;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0 0 20px 1px;
+}
+
+#title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+#description {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0px;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#main-containter {
+  opacity: 0;
+  pointer-events: none;
+  justify-content: center;
+}
+
+.fade {
+  opacity: 1;
+}
+
+#game-container.fade-in {
+  animation-name: fade-in;
+  animation-duration: 00ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes drop-down {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+span.skip {
+  transition: all 0.1s cubic-bezier(0, 1.4, 0.45, 0.89);
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
